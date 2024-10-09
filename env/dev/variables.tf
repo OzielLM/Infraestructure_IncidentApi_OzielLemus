@@ -25,3 +25,13 @@ variable "mongo_initdb_root_username" {
 variable "mongo_initdb_root_password" {
   type = string
 }
+
+variable "SSH_PRIVATE_KEY" {
+  type    = string
+  default = ""
+}
+
+variable "SSH_PUBLIC_KEY" {
+  type    = string
+  default = ""
+}
