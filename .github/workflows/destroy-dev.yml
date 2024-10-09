@@ -1,4 +1,4 @@
-name: Deploy Dev Infrastructure
+name: Destroy Dev Infrastructure
 on:
   workflow_dispatch:
 
