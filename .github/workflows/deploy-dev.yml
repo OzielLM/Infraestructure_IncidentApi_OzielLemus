@@ -7,6 +7,11 @@ on:
       - "env/dev/**"
       - "modules/**"
 
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write
+
 env:
   ARM_CLIENT_ID: "${{secrets.ARM_CLIENT_ID}}"
   ARM_CLIENT_SECRET: "${{secrets.ARM_CLIENT_SECRET}}"
@@ -37,7 +42,7 @@ jobs:
           chmod 777 ./env/dev/keys/712incident_server.pub
 
       - name: Terraform setup
-        uses: hashicorp/terraform@v2
+        uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.9.2
           terraform_wrapper: false

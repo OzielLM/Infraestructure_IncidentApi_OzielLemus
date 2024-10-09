@@ -21,3 +21,4 @@ module "dev_vm" {
   vnet_name                  = "IN-VNET-72634"
   subnet_name                = "IN-SUBNET-72634"
 }
+
